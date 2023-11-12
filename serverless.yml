@@ -1,13 +1,11 @@
 
-service:
-  name: serverless-auth0-authorizer
+service: auth-question
 
-plugins:
-  - serverless-bundle
+
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs16.x
   memorySize: 128
   environment:
     AUTH0_PUBLIC_KEY: ${file(secret.pem)}
